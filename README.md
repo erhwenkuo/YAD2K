@@ -40,24 +40,27 @@ pip install keras # Possibly older release: conda install keras
 
 ## 快速開始
 
-- 從[YOLO官方網站](http://pjreddie.com/darknet/yolo/)下載Darknet模型的設置檔與權重檔。例如:使用MS COCO資料集訓練的預訓練模型
+- 從[YOLO官方網站](http://pjreddie.com/darknet/yolo/)下載Darknet模型的設置檔與權重檔到專案根目錄。例如:使用MS COCO資料集訓練的預訓練模型
     - 下載[YOLOv2 608x608 設置檔(yolo.cfg)](https://github.com/pjreddie/darknet/blob/master/cfg/yolo.cfg)
 	- 下載[YOLOv2 608x608 權重檔(yolo.weights)](https://pjreddie.com/media/files/yolo.weights)
-- 將原本使用Darknet預訓練的YOLO_v2模型轉換為Keras模型。
+- 將原本使用Darknet預訓練的YOLO_v2模型透過`yad2k.python`命令稿來轉換為Keras模型
+    - 例如: `python yad2k.py yolo.cfg yolo.weights model_data/yolov2_coco_608x608.h5`
 - 把一些圖像複製到`images/`的子目錄來測試轉換後Keras的YOLOv2模型。
+    - 例如: `python test_yolo.py model_data/yolov2_coco_608x608.h5`
+	- 偵測的結果會置放在`images/out/`的目錄裡
 
 ```bash
 wget http://pjreddie.com/media/files/yolo.weights
 wget https://raw.githubusercontent.com/pjreddie/darknet/master/cfg/yolo.cfg
-./yad2k.py yolo.cfg yolo.weights model_data/yolo.h5
-./test_yolo.py model_data/yolo.h5  # output in images/out/
+./yad2k.py yolo.cfg yolo.weights model_data/yolov2_coco_608x608.h5
+./test_yolo.py model_data/yolov2_coco_608x608.h5  # output in images/out/
 ```
 
 請參閱 `./yad2k.py --help`和`./test_yolo.py --help`以獲取更多設定選項。
 
 --------------------------------------------------------------------------------
 
-# 入門 (Getting Started)
+## 入門 (Getting Started)
 * [demo.ipynb](/demo.ipynb) 是最簡單開始學習使用YOLO的方法。它展示了一個使用MS COCO預先訓練的模型來偵測圖像中的物體的範例。
 它包括在任意圖像上運行物體偵測和為每個偵測到的物體產生邊界框(bounding box)的程式碼。
 
