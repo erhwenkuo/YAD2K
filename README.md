@@ -40,9 +40,9 @@ pip install keras # Possibly older release: conda install keras
 
 ## 快速開始
 
-- 從[YOLO官方網站]（http://pjreddie.com/darknet/yolo/）下載Darknet模型的設置檔與權重檔。
-    - [YOLOv2 608x608 設置檔(yolo.cfg)](https://github.com/pjreddie/darknet/blob/master/cfg/yolo.cfg)
-	- [YOLOv2 608x608 權重檔(yolo.weights)](https://pjreddie.com/media/files/yolo.weights)
+- 從[YOLO官方網站](http://pjreddie.com/darknet/yolo/)下載Darknet模型的設置檔與權重檔。
+    - 下載[YOLOv2 608x608 設置檔(yolo.cfg)](https://github.com/pjreddie/darknet/blob/master/cfg/yolo.cfg)
+	- 下載[YOLOv2 608x608 權重檔(yolo.weights)](https://pjreddie.com/media/files/yolo.weights)
 - 將Darknet YOLO_v2模型轉換為Keras模型。
 - 把一些圖像複製到`images/`的子目錄來測試轉換後Keras的YOLOv2模型。
 
