@@ -53,7 +53,8 @@ wget https://raw.githubusercontent.com/pjreddie/darknet/master/cfg/yolo.cfg
 ./test_yolo.py model_data/yolo.h5  # output in images/out/
 ```
 
-請參閱`./yad2k.py --help`和`./test_yolo.py --help`以獲取更多設定選項。
+請參閱 `./yad2k.py --help`和`./test_yolo.py --help`以獲取更多設定選項。
+
 --------------------------------------------------------------------------------
 
 # 入門 (Getting Started)
