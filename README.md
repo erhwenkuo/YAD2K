@@ -46,8 +46,9 @@ pip install keras # Possibly older release: conda install keras
 - 將原本使用Darknet預訓練的YOLO_v2模型透過`yad2k.python`命令稿來轉換為Keras模型
     - 例如: `python yad2k.py yolo.cfg yolo.weights model_data/yolov2_coco_608x608.h5`
 - 把一些圖像複製到`images/`的子目錄來測試轉換後Keras的YOLOv2模型。
-    - 例如: `python test_yolo.py model_data/yolov2_coco_608x608.h5`
-	- 偵測的結果會置放在`images/out/`的目錄裡
+    - 例如: `python test_yolo.py model_data/yolov2_coco_608x608.h5`，偵測的結果會置放在`images/out/`的目錄裡
+
+完整範例如下:
 
 ```bash
 wget http://pjreddie.com/media/files/yolo.weights
